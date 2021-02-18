@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SoulSneaker</title>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+  <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css" />
+  <!-- .css -->
+  <!-- <style>
+    :root {
+      --ion-safe-area-top: 20px;
+      --ion-safe-area-bottom: 22px;
+    }
+
+  </style> -->
+  <script type="module">
+    import { menuController } from 'https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/index.esm.js';
+    window.menuController = menuController;
+  </script>
+
+</head>
+
+<body>
+  <ion-app>
+      <!-- Side Bar Menu Content -->
+    <ion-menu side="start" content-id="main-content">
+      <ion-header>
+        <ion-toolbar translucent>
+          <ion-title>Menu</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
+        <ion-list>
+          <ion-item>
+            <ion-icon name="home" slot="start"></ion-icon>
+            <ion-label>Home</ion-label>
+          </ion-item>
+        <ion-list>
+          <ion-item>
+            <ion-icon name="search" slot="start"></ion-icon>
+            <ion-label>Search</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-icon name="heart" slot="start"></ion-icon>
+            <ion-label>My Favourites</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-icon name="cash" slot="start"></ion-icon>
+            <ion-label>Resell</ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+
+    <!-- Side Bar Menu -->
+    <div class="ion-page" id="main-content">
+      <ion-header>
+        <ion-toolbar color="danger">
+          <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+          </ion-buttons>
+          <ion-title>SoulSneaker</ion-title>
+        </ion-toolbar>
+      </ion-header>
+
+<!-- Tab Section -->
+<!-- Home Section -->
+<ion-tabs>
+<ion-tab tab="home">
+  <ion-header translucent>
+    <ion-toolbar>
+      <ion-title>Home</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content fullscreen class="ion-padding" scroll-y="false">
+    <h1><b>Welcome!</b></h1>
+    <ion-slides>
+
+      <ion-slide>
+        <div class="slide">
+          <img src="Pictures/sneaker0.jpg"/>
+          <h2><b>Explore!</b></h2>
+          <p>The <b>SoulSneaker App</b> is your <b>ULTIMATE SNEAKER COMPANION!</b></p>
+        </div>
+      </ion-slide>
+      
+      <ion-slide>
+        <div class="slide">
+          <img src="Pictures/sneaker1.jpg"/>
+          <h2><b>Discover!</b></h2>
+          <p>Get a step ahend from the others by exploring and browsing our <b>wide-range</b> of sneakers.</p>
+        </div>
+      </ion-slide>
+
+      <ion-slide>
+        <div class="slide">
+          <img src="Pictures/sneaker2.jpg"/>
+          <h2><b>Resell?</b></h2>
+          <p>Want to see how much your sneaker collection is worth! Check out the <b>Resell</b> Section.</p>
+        </div>
+      </ion-slide>
+     
+  </ion-content>
+
+
+
+</ion-tab>
+
+</ion-tab>
+<!-- Tabs Content -->
+    <ion-tab tab="search">
+      <ion-header translucent>
+        <ion-toolbar>
+          <ion-title>Search Section</ion-title>
+        </ion-toolbar>
+
+        
+<!-- Search Bar On Header -->
+        <ion-toolbar color="danger"> 
+          <br>
+          <ion-searchbar></ion-searchbar>
+          <br>
+        </ion-toolbar>
+
+       
+
+      </ion-header>
+<!-- Sneaker Content Searches -->
+      <ion-content fullscreen class="ion-padding">
+    
+        <!-- Filter Buttons for Search -->
+        <section>
+          <ion-button size="small" color="medium">All</ion-button>
+          <ion-button size="small" color="light">Men</ion-button>
+          <ion-button size="small" color="light">Women</ion-button>
+          <ion-button size="small" color="light">Jordan</ion-button>
+        </section>
+
+        <ion-card forceOverscroll="true" href="sneakeritem.html">
+            <img src="Pictures/sneaker0.jpg" alt="Sneaker"></img>
+            <h3>Nike Dunk High Game Royal</h3>
+            <h4>$120</h4>
+          </ion-card>
+
+            <ion-card forceOverscroll="true" href="">
+              <img src="Pictures/sneaker1.jpg" alt="Sneaker1"></img>
+              <h3>Jordan 1 Retro High</h3>
+              <h4>$170</h4>
+            </ion-card>
+      </ion-content>
+    </ion-tab>
+      
+    </ion-tab>
+<!-- Favourite Section -->
+    <ion-tab tab="favourites">
+      <ion-header translucent>
+        <ion-toolbar>
+          <ion-title>Favourites Section</ion-title>
+        </ion-toolbar>
+      </ion-header>
+<!-- Favourite List Sneaker -->
+      <ion-content fullscreen>
+        <ion-list>
+          <ion-list-header>
+            <h1>Your Favourites</h1> 
+          </ion-list-header>
+
+          <ion-item>
+            <ion-avatar slot="start">
+              <img src="Pictures/sneaker0.jpg">
+            </ion-avatar>
+            <ion-label>
+              <h2>Nike Dunk High Game Royal</h2>
+              <h3>Brand: Nike</h3>
+              <h3>Year: 2021</h3>
+              <p>Retail Price: $120</p>
+              <section>
+              <ion-button color="danger">Remove</ion-button>
+              <ion-icon name="close-circle"></ion-icon>
+            </section>
+            </ion-label>
+          </ion-item>
+
+          <ion-item>
+            <ion-avatar slot="start">
+              <img src="Pictures/sneaker1.jpg">
+            </ion-avatar>
+            <ion-label>
+              <h2>Jordan 1 Retro High OG Hyper Royal</h2>
+              <h3>Brand: Jordan</h3>
+              <h3>Year: 2021</h3>
+              <p>Retail Price: $170</p>
+              <section>
+                <ion-button color="danger">Remove</ion-button>
+                <ion-icon name="close-circle"></ion-icon>
+              </section>
+            </ion-label>
+          </ion-item>
+
+          <ion-item>
+            <ion-avatar slot="start">
+              <img src="Pictures/sneaker2.jpg">
+            </ion-avatar>
+            <ion-label>
+              <h2>Jordan 3 Retro Rust Pink (W)</h2>
+              <h3>Brand: Jordan</h3>
+              <h3>Year: 2021</h3>
+              <p>Retail Price: $190</p>
+              <section>
+                <ion-button color="danger">Remove</ion-button>
+                <ion-icon name="close-circle"></ion-icon>
+              </section>
+            </ion-label>
+          </ion-item>
+
+          <ion-item>
+            <ion-avatar slot="start">
+              <img src="Pictures/sneaker3.jpg">
+            </ion-avatar>
+            <ion-label>
+              <h2>Jordan 5 Retro Raging Bulls Red (2021)</h2>
+              <h3>Brand: Jordan</h3>
+              <h3>Year: 2021</h3>
+              <p>Retail Price: $190</p>
+              <section>
+                <ion-button color="danger">Remove</ion-button>
+                <ion-icon name="close-circle"></ion-icon>
+              </section>
+            </ion-label>
+          </ion-item>
+
+          <ion-item>
+            <ion-avatar slot="start">
+              <img src="Pictures/sneaker4.jpg">
+            </ion-avatar>
+            <ion-label>
+              <h2>Jordan 5 Retro Raging Bulls Red 2021 (GS)</h2>
+              <h3>Brand: Jordan</h3>
+              <h3>Year: 2021</h3>
+              <p>Retail Price: $140</p>
+              <section>
+                <ion-button color="danger">Remove</ion-button>
+                <ion-icon name="close-circle"></ion-icon>
+              </section>
+            </ion-label>
+          </ion-item>
+
+          <ion-item>
+            <ion-avatar slot="start">
+              <img src="Pictures/sneaker5.jpg">
+            </ion-avatar>
+            <ion-label>
+              <h2>Jordan 12 Retro Low Easter (2021)</h2>
+              <h3>Brand: Jordan</h3>
+              <h3>Year: 2021</h3>
+              <p>Retail Price: $200</p>
+              <section>
+                <ion-button color="danger">Remove</ion-button>
+                <ion-icon name="close-circle"></ion-icon>
+              </section>
+            </ion-label>
+          </ion-item>
+
+          <ion-item>
+            <ion-avatar slot="start">
+              <img src="Pictures/sneaker6.jpg">
+            </ion-avatar>
+            <ion-label>
+              <h2>Jordan 1 Retro High White University Blue Black (GS)</h2>
+              <h3>Brand: Jordan</h3>
+              <h3>Year: 2021</h3>
+              <p>Retail Price: $130</p>
+              <section>
+                <ion-button color="danger">Remove</ion-button>
+                <ion-icon name="close-circle"></ion-icon>
+              </section>
+            </ion-label>
+          </ion-item>
+
+      <!-- <ion-content fullscreen class="ion-padding">
+        <h1>My Favourites Area</h1> -->
+      </ion-content>
+    </ion-tab>
+
+    <ion-tab tab="resell">
+      <ion-header translucent>
+        <ion-toolbar>
+          <ion-title>Resell Section</ion-title>
+        </ion-toolbar>
+      </ion-header>
+
+      <ion-content fullscreen class="ion-padding">
+        <h1>Resell</h1>
+        <ion-item>
+          <ion-avatar slot="start">
+            <img src="Pictures/sneaker0.jpg">
+          </ion-avatar>
+          <ion-label>
+            <h2>Nike Dunk High Game Royal</h2>
+            <h3>Brand: Nike</h3>
+            <h3>Year: 2021</h3>
+            <p>Retail Price: $120 X 1</p>
+<!-- buttons for adding/minus/remove item completely -->
+            <section>
+              <ion-button color="success">Add</ion-button>
+              <ion-icon name="heart"></ion-icon>
+              <ion-button color="warning">Minus</ion-button>
+              <ion-icon name="remove-circle"></ion-icon>
+              <ion-button color="danger">Delete</ion-button>
+              <ion-icon name="trash"></ion-icon>
+            </section>
+
+          </ion-label>
+        </ion-item>
+
+        <ion-item>
+          <ion-avatar slot="start">
+            <img src="Pictures/sneaker1.jpg">
+          </ion-avatar>
+          <ion-label>
+            <h2>Jordan 1 Retro High OG Hyper Royal</h2>
+            <h3>Brand: Jordan</h3>
+            <h3>Year: 2021</h3>
+            <p>Retail Price: $170 X 1</p>
+<!-- Calculation button for adding total of all items in  -->
+            <section>
+              <ion-button color="success">Add</ion-button>
+              <ion-icon name="heart"></ion-icon>
+              <ion-button color="warning">Minus</ion-button>
+              <ion-icon name="remove-circle"></ion-icon>
+              <ion-button color="danger">Delete</ion-button>
+              <ion-icon name="trash"></ion-icon>
+            </section>
+
+          </ion-label>
+        </ion-item>
+
+
+        <ion-card-content>
+          <section>
+            <ion-button expand="block"  color="danger">Calculate Resell Value</ion-button>
+          </section> 
+        </ion-card-content>
+
+        <ion-card>
+          <br>
+          <H2>Your Total Resell Value:$290</H2>
+          <br>
+        </ion-card>
+
+
+      </ion-content>
+    </ion-tab>
+
+    
+
+
+<!-- Tabs Icons with icon names on Bottom -->
+<ion-tab-bar slot="bottom" color="danger">
+<ion-tab-button tab="home">
+  <ion-label>Home</ion-label>
+  <ion-icon name="home"></ion-icon>
+</ion-tab-button>
+    
+      <ion-tab-button tab="search">
+        <ion-label>Search</ion-label>
+        <ion-icon name="search"></ion-icon>
+      </ion-tab-button>
+      <ion-tab-button tab="favourites">
+        <ion-label>My Favourites</ion-label>
+        <ion-icon name="heart"></ion-icon>
+      </ion-tab-button>
+      <ion-tab-button tab="resell">
+        <ion-label>Resell</ion-label>
+        <ion-icon name="cash"></ion-icon>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+
+
+
+
+  </ion-app>
+
+
+</body>
+
+</html>
